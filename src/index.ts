@@ -5,8 +5,11 @@ export { Config, Variables, Need, Rule, Job, Artifacts };
 
 export const createConfig = <Stages, JobNames>(
   config: Config<Stages, JobNames>,
-  outputFile: string
-): void => {
+  outputFile?: string
+): string => {
   const configYml = getConfigYaml(config);
-  return writeConfigToFile(configYml, outputFile);
+  if (!outputFile) return configYml;
+
+  writeConfigToFile(configYml, outputFile);
+  return configYml;
 };
