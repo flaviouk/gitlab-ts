@@ -10,7 +10,7 @@ export interface Variables {
   [name: string]: string | number;
 }
 
-export interface Need<JobNames> {
+export interface Need<JobNames = string> {
   job: JobNames;
   artifacts?: boolean;
   ref?: string;
@@ -19,11 +19,11 @@ export interface Need<JobNames> {
 
 export interface Rule {
   if: string;
-  when?: "on_success" | "delayed" | "always";
+  when?: "on_success" | "delayed" | "always" | "manual" | "never";
   allow_failure?: boolean;
 }
 
-export interface Job<Stages, JobNames> {
+export interface Job<Stages = string, JobNames = string> {
   name: JobNames;
   stage: Stages;
   variables?: Variables;
