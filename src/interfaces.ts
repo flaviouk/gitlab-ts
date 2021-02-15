@@ -6,24 +6,24 @@ export interface Config<Stages = string, JobNames = string> {
   jobs: Job<Stages, JobNames>[];
 }
 
-interface Variables {
+export interface Variables {
   [name: string]: string | number;
 }
 
-interface Need<JobNames> {
+export interface Need<JobNames> {
   job: JobNames;
   artifacts?: boolean;
   ref?: string;
   project?: string;
 }
 
-interface Rule {
+export interface Rule {
   if: string;
   when?: "on_success" | "delayed" | "always";
   allow_failure?: boolean;
 }
 
-interface Job<Stages, JobNames> {
+export interface Job<Stages, JobNames> {
   name: JobNames;
   stage: Stages;
   variables?: Variables;
@@ -101,7 +101,7 @@ interface Job<Stages, JobNames> {
 }
 
 // https://docs.gitlab.com/ee/ci/yaml/#artifacts
-interface Artifacts {
+export interface Artifacts {
   paths: string[];
   exclude?: string[];
   expose_as?: string;

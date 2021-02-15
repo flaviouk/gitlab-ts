@@ -1,7 +1,7 @@
 import { getConfigYaml, writeConfigToFile } from "./utils";
-import { Config } from "./interfaces";
+import { Config, Variables, Need, Rule, Job, Artifacts } from "./interfaces";
 
-export { Config };
+export { Config, Variables, Need, Rule, Job, Artifacts };
 
 export const createConfig = <Stages, JobNames>(
   config: Config<Stages, JobNames>,
