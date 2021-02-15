@@ -37,9 +37,6 @@ export const writeConfigToFile = (
     if (error) {
       console.error(error);
       process.exit(1);
-    } else {
-      console.log("Success");
-      process.exit(0);
     }
   });
 };
