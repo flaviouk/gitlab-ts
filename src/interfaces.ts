@@ -1,8 +1,15 @@
 // https://docs.gitlab.com/ee/ci/yaml/
 
 export interface Config<Stages = string, JobNames = string> {
+  image?: Image;
   variables?: Variables;
   stages: Stages[];
+  include?: {
+    local?: string;
+    project?: string;
+    file?: string;
+    ref?: string;
+  };
   jobs: Job<Stages, JobNames>[];
 }
 
@@ -23,12 +30,14 @@ export interface Rule {
   allow_failure?: boolean;
 }
 
+export type Image = string | { name: string; entrypoint: string };
+
 export interface Job<Stages = string, JobNames = string> {
   name: JobNames;
   stage: Stages;
   variables?: Variables;
   extends?: string[];
-  image?: string | { name: string; entrypoint: string };
+  image?: Image;
   services?:
     | string[]
     | { name: string; alias?: string; entrypoint?: string; command?: string };
