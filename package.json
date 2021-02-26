@@ -1,6 +1,6 @@
 {
   "name": "gitlab-ts",
-  "version": "13.8.0-beta.6",
+  "version": "13.8.0-beta.7",
   "repository": "git@github.com:flaviouk/gitlab-ts.git",
   "author": "Flávio Carvalho <hey@flavio.uk>",
   "module": "dist/gitlab-ts.esm.js",
@@ -16,12 +16,14 @@
     "format:all": "prettier '**/*.{js,jsx,ts,tsx,json,md,css,yaml,yml}' --write",
     "format:check": "prettier '**/*.{js,jsx,ts,tsx,json,md,css,yaml,yml}' --check"
   },
+  "dependencies": {
+    "yaml": "1.10.0"
+  },
   "devDependencies": {
     "@types/lodash": "^4.14.168",
     "prettier": "2.2.1",
     "tsdx": "0.14.1",
     "tslib": "2.1.0",
-    "typescript": "4.1.5",
-    "yaml": "1.10.0"
+    "typescript": "4.1.5"
   }
 }
