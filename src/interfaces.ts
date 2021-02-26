@@ -9,7 +9,7 @@ export interface Config<Stages = string, JobNames = string> {
     project?: string;
     file?: string;
     ref?: string;
-  };
+  }[];
   jobs: Job<Stages, JobNames>[];
 }
 
