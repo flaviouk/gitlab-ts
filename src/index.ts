@@ -7,9 +7,10 @@ import {
   Job,
   Artifacts,
   Image,
+  Include,
 } from "./interfaces";
 
-export { Config, Variables, Need, Rule, Job, Artifacts, Image };
+export { Config, Variables, Need, Rule, Job, Artifacts, Image, Include };
 
 export const createConfig = <Stages, JobNames>(
   config: Config<Stages, JobNames>,
