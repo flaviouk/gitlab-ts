@@ -4,13 +4,15 @@ export interface Config<Stages = string, JobNames = string> {
   image?: Image;
   variables?: Variables;
   stages: Stages[];
-  include?: {
-    local?: string;
-    project?: string;
-    file?: string;
-    ref?: string;
-  }[];
+  include?: Include[];
   jobs: Job<Stages, JobNames>[];
+}
+
+export interface Include {
+  local?: string;
+  project?: string;
+  file?: string;
+  ref?: string;
 }
 
 export interface Variables {
@@ -42,7 +44,7 @@ export interface Job<Stages = string, JobNames = string> {
     | string[]
     | { name: string; alias?: string; entrypoint?: string; command?: string };
   before_script?: string[];
-  script: string[];
+  script?: string[];
   after_script?: string[];
   needs?: Need<JobNames>[];
   allow_failure?: boolean | { exit_codes: number[] };

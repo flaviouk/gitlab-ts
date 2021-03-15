@@ -12,7 +12,6 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
     "format:all": "prettier '**/*.{js,jsx,ts,tsx,json,md,css,yaml,yml}' --write",
     "format:check": "prettier '**/*.{js,jsx,ts,tsx,json,md,css,yaml,yml}' --check"
   },
@@ -21,6 +20,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.168",
+    "auto": "^10.20.1",
     "prettier": "2.2.1",
     "tsdx": "0.14.1",
     "tslib": "2.1.0",
