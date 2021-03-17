@@ -1,3 +1,16 @@
+# v13.8.2 (Wed Mar 17 2021)
+
+#### 🐛 Bug Fix
+
+- Update interfaces.ts [#5](https://github.com/flaviouk/gitlab-ts/pull/5) ([@flaviouk](https://github.com/flaviouk))
+- Update interfaces.ts [#4](https://github.com/flaviouk/gitlab-ts/pull/4) ([@flaviouk](https://github.com/flaviouk))
+
+#### Authors: 1
+
+- Flávio Carvalho ([@flaviouk](https://github.com/flaviouk))
+
+---
+
 # v13.8.1 (Wed Mar 17 2021)
 
 #### 🐛 Bug Fix
