@@ -42,7 +42,12 @@ export interface Job<Stages = string, JobNames = string> {
   image?: Image;
   services?:
     | string[]
-    | { name: string; alias?: string; entrypoint?: string; command?: string[] }[];
+    | {
+        name: string;
+        alias?: string;
+        entrypoint?: string;
+        command?: string[];
+      }[];
   before_script?: string[];
   script?: string[];
   after_script?: string[];
