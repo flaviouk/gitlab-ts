@@ -1,3 +1,15 @@
+# v13.8.1 (Wed Mar 17 2021)
+
+#### 🐛 Bug Fix
+
+- Update services interface [#3](https://github.com/flaviouk/gitlab-ts/pull/3) ([@flaviouk](https://github.com/flaviouk))
+
+#### Authors: 1
+
+- Flávio Carvalho ([@flaviouk](https://github.com/flaviouk))
+
+---
+
 # v13.8.0 (Mon Mar 15 2021)
 
 #### 🐛 Bug Fix
