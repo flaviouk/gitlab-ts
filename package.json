@@ -1,6 +1,6 @@
 {
   "name": "gitlab-ts",
-  "version": "13.8.2",
+  "version": "13.8.3",
   "repository": "git@github.com:flaviouk/gitlab-ts.git",
   "author": "Flávio Carvalho <hey@flavio.uk>",
   "module": "dist/gitlab-ts.esm.js",
