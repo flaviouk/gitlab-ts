@@ -81,6 +81,7 @@ export interface Job<Stages = string, JobNames = string> {
     url: string;
     on_stop?: string;
     auto_stop_in?: string;
+    action?: "start" | "prepare" | "stop";
   };
   cache?: {
     key: string;
